@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ueo pipefail
 
+export DOCKER_DEFAULT_PLATFORM=linux/arm/v7
+
 # Run takes a service name, pulls down any pre-built image for that name
 # and then runs docker-compose run a generated project name
 

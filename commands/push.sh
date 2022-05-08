@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ueo pipefail
 
+export DOCKER_DEFAULT_PLATFORM=linux/arm/v7
+
 push_retries="$(plugin_read_config PUSH_RETRIES "0")"
 
 # Targets for pushing come in a variety of forms:

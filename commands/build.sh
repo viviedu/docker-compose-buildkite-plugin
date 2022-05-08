@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ueo pipefail
 
+export DOCKER_DEFAULT_PLATFORM=linux/arm/v7
+
 image_repository="$(plugin_read_config IMAGE_REPOSITORY)"
 pull_retries="$(plugin_read_config PULL_RETRIES "0")"
 push_retries="$(plugin_read_config PUSH_RETRIES "0")"
